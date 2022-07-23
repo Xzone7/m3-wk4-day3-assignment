@@ -1,3 +1,4 @@
+@import "colors.scss";
 /* css for registration form and errors*/
 /* Styles for listing table */
 body {
@@ -20,19 +21,23 @@ body {
 		width: 100%;
 		margin: 0px 0 10px;
 	}
-	.btn {
-		flex: 1 0 100%;
+	.submit-button {
+		border: none;
+		background-color: $backgroundColor1;
+		color: $color4;
+		padding: 5px;
+		margin-top: 20px;
 	}
 }
 .my-errors {
 	margin: 0 auto;
+	margin-bottom: 20px;
 	padding: 0;
 	list-style: none;
 	color: #333;
 	font-size: 1.2rem;
 	display: table;
 	li {
-		margin: 0 0 1rem;
 		&:before {
 			content: "! Error : ";
 			color: #f00;
@@ -58,4 +63,8 @@ body {
 			border-right: 1px solid #666;
 		}
 	}
+}
+.form-title {
+	text-align: center;
+	font-weight: 700;
 }

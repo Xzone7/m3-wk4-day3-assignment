@@ -2,12 +2,12 @@
 /* SCSS */
 nav {
   font-size: 1em;
-  font-font-weight: bold;
-  float: left; }
+  font-font-weight: bold; }
   nav ul {
-    list-style-type: none; }
+    list-style-type: none;
+    display: flex;
+    padding-right: 40px; }
     nav ul li {
-      float: left;
       margin: 0 5px 0 0;
       color: white; }
       nav ul li a {
@@ -15,6 +15,9 @@ nav {
         color: white; }
         nav ul li a:hover {
           text-decoration: underline; }
+    nav ul li:last-child {
+      flex-grow: 2;
+      text-align: right; }
 
 /* css for registration form and errors*/
 /* Styles for listing table */
@@ -35,22 +38,25 @@ body {
   .form-registration input {
     width: 100%;
     margin: 0px 0 10px; }
-  .form-registration .btn {
-    flex: 1 0 100%; }
+  .form-registration .submit-button {
+    border: none;
+    background-color: #daaa0e;
+    color: white;
+    padding: 5px;
+    margin-top: 20px; }
 
 .my-errors {
   margin: 0 auto;
+  margin-bottom: 20px;
   padding: 0;
   list-style: none;
   color: #333;
   font-size: 1.2rem;
   display: table; }
-  .my-errors li {
-    margin: 0 0 1rem; }
-    .my-errors li:before {
-      content: "! Error : ";
-      color: #f00;
-      font-weight: bold; }
+  .my-errors li:before {
+    content: "! Error : ";
+    color: #f00;
+    font-weight: bold; }
 
 .listing-table {
   width: 100%; }
@@ -66,6 +72,10 @@ body {
     border-bottom: 1px solid #666; }
     .listing-table td:first-child {
       border-right: 1px solid #666; }
+
+.form-title {
+  text-align: center;
+  font-weight: 700; }
 
 /* Variables */
 html {
@@ -88,16 +98,26 @@ main {
   padding: 1.5%;
   margin: 0 auto;
   display: flex; }
-  main #intro-image img {
-    width: 800px; }
+  main #intro-image {
+    flex-grow: 2;
+    margin: 25px; }
+    main #intro-image img {
+      width: 800px; }
+    main #intro-image h2 {
+      text-align: center; }
   main #intro-text {
     background: #d4d5d8;
     text-align: center;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding: 0 10px;
+    width: 40%; }
+    main #intro-text > div {
+      width: 100%; }
     main #intro-text h3 {
       font-size: 2em;
-      color: #313130; }
+      color: #313130;
+      margin: 20px 0; }
     main #intro-text span {
       font-family: "Sacramento", cursive;
       font-size: 2em; }
@@ -110,7 +130,6 @@ footer {
 
 button, .submit-buttton {
   color: white;
-  width: 100px;
   height: 40px;
   background: #daaa0e;
   margin-top: 2em; }
